@@ -1,5 +1,5 @@
 SELECT cpu_number, id, total_mem FROM host_info
-order by cpu_number, total_mem descstop cron servic
+order by cpu_number, total_mem
 
 SELECT host_usage.host_id, host_info.hostname,
 date_trunc('hour', timestamp) + date_part('minute', timestamp):: int / 5 * interval '5 min' as time_rnd,
