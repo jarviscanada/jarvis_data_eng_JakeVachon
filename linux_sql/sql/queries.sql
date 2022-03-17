@@ -9,7 +9,12 @@ JOIN host_info on host_usage.host_id = host_info.id
 GROUP BY time_rnd, host_id, host_info.hostname
 ORDER BY host_id
 
-SELECT host_usage.host_id,
-date_trunc('hour', timestamp) + date_part('minute', timestamp):: int / 1 * interval '1 min' as time_rnd
-FROM host_usage
-order by time_rnd desc
+SELECT * FROM (
+	SELECT host_id, hostname, date_trunc('hour', host_usage.timestamp) + date_part('minute', host_usage.timestamp):: int / 5 * interval '5 min' as timenew,
+	    count(*) as num_data_points
+    FROM host_info
+    JOIN host_usage on host_info.id  = host_usage.host_id
+    GROUP BY host_id, hostname, timenew, total_mem
+    ORDER BY timenew) AS times_executed
+WHERE num_data_points <3;
+
