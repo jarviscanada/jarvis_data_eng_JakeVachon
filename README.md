@@ -1,6 +1,6 @@
 # Jacques Vachon . Jarvis Consulting
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis a orci ac malesuada. Vivamus ligula elit, viverra eu ante porttitor, blandit convallis augue. Aliquam justo justo, mollis at lacus eu, rutrum finibus est. Vestibulum venenatis purus id accumsan pretium. In efficitur magna nec enim laoreet tincidunt. Ut libero metus, scelerisque nec eros vitae, sagittis pellentesque enim. Donec dictum felis volutpat, vehicula magna eu, imperdiet elit. Phasellus ut velit a massa efficitur faucibus. Sed volutpat, lacus sed sagittis luctus, elit.
+I am a graduate of the Computer Programming diploma at Algonquin college. What excites me about the software industry is that I'm taking part in creating the invisible world that surrounds us all in our day to day lives, knowing I can create anything I can imagine with the right lines of code. I'm set on improving my abilities and knowledge on all things software related so that I can continue to create bigger and better things.
 
 ## Skills
 
@@ -29,15 +29,8 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_JakeVachon
 
 ## Education
 **Algonquin College (2019-2021)**, Dipolma of Computer Programming, Information Technology
-- Scholarship
-- Dean's List (2015, 2016): Ut enim ad minim veniam
-- GPA: 3.8/4.0
-
-**XYZ university (2016-2018)**, Master of Engineering, Electrical and Computer Engineering
 
 
 ## Miscellaneous
-- Udacity Machine Learning (2019)
-- Winner
 - Competitive Powerlifter
 - Latin and linguistics enthusiast
