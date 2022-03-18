@@ -1,0 +1,73 @@
+# Preferred name (Characters only)
+name: "Jacques Vachon"
+# Your GitHub repo root URL
+github_repo_root_url: https://github.com/jarviscanada/jarvis_data_eng_JakeVachon
+
+# Introduce yourself, your academic and professional background.
+# What excites you about the software industry and your passion. At least 80 words
+summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis a orci ac malesuada. Vivamus ligula elit, viverra eu ante porttitor, blandit convallis augue. Aliquam justo justo, mollis at lacus eu, rutrum finibus est. Vestibulum venenatis purus id accumsan pretium. In efficitur magna nec enim laoreet tincidunt. Ut libero metus, scelerisque nec eros vitae, sagittis pellentesque enim. Donec dictum felis volutpat, vehicula magna eu, imperdiet elit. Phasellus ut velit a massa efficitur faucibus. Sed volutpat, lacus sed sagittis luctus, elit.
+
+# Group your skills by level.
+# Your skills can be anything software related (e.g. language, frameworks, methodologies, software, etc.).
+skills:
+  # At least 5 skills
+  proficient:
+    - Java
+    - Linux/Bash
+    - RDBMS/SQL
+    - Agile/Scrum
+    - Git
+  # At least 5 skills
+  competent:
+    - Python
+    - Pandas
+    - Android development
+    - HTML/CSS
+    - Javascript
+  # At least 5 skills
+  familiar:
+    - React.js
+    - Node.js
+    - Firebase
+    - COBOL
+    - NoSQL
+
+# List of Jarvis projects
+jarvis_projects:
+  - name: "Monitoring Agent"
+    git_url: "https://github.com/jarviscanada/jarvis_data_eng_JakeVachon/tree/master/linux_sql"
+    # The project description allows hiring managers to understand your project and technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
+    # The project description must start with an action verb (https://bit.ly/3guO98u)
+    description: "Developed 3 .sh scripts which together allow the user to monitor and query host hardware and usage information. The initial startup script initializes a docker psql instance, the following 2 scripts extract hardware and usage information respectively. Usage script relies on 'crontab' to extract host usage information at regular intervals and inserting them into a database allowing easy access to usage information using SQL queries."
+
+# List of personal or academic projects
+# Feel free to add more projects
+highlighted_projects:
+    #project name
+  - name: "Weather Application"
+    # The project description must start with an action verb (https://bit.ly/3guO98u)
+    description: "Developed a weather application for Android using Java allowing users to view various forecast lengths for their or any city by utilizing the 'openweather' API."
+
+#List of professional experience
+#The job description allows hiring managers to understand your job and the technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
+#The description must be more than 25 words. If your experience is not software related, please focus on soft skills and achievements (e.g. team collaboration, problem-solving, improvements, communication).
+professional_experience:
+  #Write your Jarvis role as a professional experience rather than training.
+  - title: "Software Developer"
+    company: "Jarvis"
+    duration: "2022-present"
+    description: "Software Developer working with various languages and technologies such as Linux, SQL and Java."
+
+#List of edcuation
+education: 
+  - school_name: "Algonquin College"
+    duration: "2019-2021"
+    degree: "Diploma of Computer Programming"
+    department: "Information Technology"
+
+
+others:
+  - title: "Activities/Hobbies"
+    bullets:
+      - "Latin and linguistics enthusiast"
+      - "Competitive Powerlifter"
