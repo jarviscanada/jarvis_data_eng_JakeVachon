@@ -5,7 +5,10 @@ import org.apache.log4j.BasicConfigurator;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 
 public class JavaGrepImp implements JavaGrep {
@@ -38,11 +41,17 @@ public class JavaGrepImp implements JavaGrep {
 
     @Override
     public void process() throws IOException {
+        List<String> lines = new ArrayList<>();
+
+
 
     }
 
     @Override
     public List<File> listFiles(String rootDir) {
+
+
+
         return null;
     }
 
@@ -53,7 +62,16 @@ public class JavaGrepImp implements JavaGrep {
 
     @Override
     public Boolean containsPattern(String line) {
-        return null;
+
+        Pattern pattern = Pattern.compile(getRegex());
+        Matcher matcher = pattern.matcher(line);
+
+        if (matcher.find()) {
+
+            return true;
+        }
+
+        return false;
     }
 
     @Override
