@@ -3,8 +3,7 @@ import org.slf4j.LoggerFactory;
 import org.apache.log4j.BasicConfigurator;
 
 
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -41,26 +40,58 @@ public class JavaGrepImp implements JavaGrep {
 
     @Override
     public void process() throws IOException {
-        List<String> lines = new ArrayList<>();
+        List<String> matchedLines = new ArrayList<>();
 
-
+        for (File file : listFiles(getRootPath())) {
+            for (String line : readLines(file)) {
+                if (containsPattern(line)) {
+                    matchedLines.add(line);
+                }
+            }
+        } writeToFile(matchedLines);
 
     }
 
     @Override
     public List<File> listFiles(String rootDir) {
 
+        List<File> returnRes = new ArrayList<>();
+        File root = new File(rootDir);
+        File[] files = root.listFiles();
 
+        for (File file : files) {
+            if (file.isDirectory()) {
+                listFiles(file.getAbsolutePath());
+            }
+            else if (file.isFile()){
+                returnRes.add(file);
+            }
+        }
 
-        return null;
+        return returnRes;
     }
 
     @Override
-    public List<File> readLines(File inputFile) {
-        return null;
+    public List<String> readLines(File inputFile) throws FileNotFoundException {
+        List<String> lines = new ArrayList<>();
+        BufferedReader reader = null;
+        try {
+            reader = new BufferedReader(new FileReader(inputFile));
+
+            String line = reader.readLine();
+            while (line != null) {
+                lines.add(line);
+                line = reader.readLine();
+            }
+
+            reader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return lines;
     }
 
-    @Override
+        @Override
     public Boolean containsPattern(String line) {
 
         Pattern pattern = Pattern.compile(getRegex());
@@ -77,6 +108,14 @@ public class JavaGrepImp implements JavaGrep {
     @Override
     public void writeToFile(List<String> lines) throws IOException {
 
+        try (Writer writer = new BufferedWriter(new OutputStreamWriter(
+                new FileOutputStream(getOutFile()), "utf-8"))) {
+            for (String line : lines) {
+                writer.write(line);
+
+            }
+
+        }
     }
 
     @Override

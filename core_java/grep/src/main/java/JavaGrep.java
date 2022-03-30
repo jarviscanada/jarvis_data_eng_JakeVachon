@@ -1,4 +1,5 @@
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.List;
 
@@ -12,7 +13,7 @@ public interface JavaGrep {
 
 
 
-    List<File> readLines(File inputFile);
+    List<String> readLines(File inputFile) throws FileNotFoundException;
 
 
 
