@@ -5,6 +5,7 @@ import org.apache.log4j.BasicConfigurator;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -31,7 +32,6 @@ public class JavaGrepImp implements JavaGrep {
     javaGrepImp.setRootPath(args[1]);
     javaGrepImp.setOutFile(args[2]);
 
-    System.out.println(javaGrepImp.getRegex());
     try {
         javaGrepImp.process();
     }   catch (Exception ex) {
@@ -58,14 +58,21 @@ public class JavaGrepImp implements JavaGrep {
 
         List<File> returnRes = new ArrayList<>();
         File root = new File(rootDir);
-        File[] files = root.listFiles();
+        List<File> files = Arrays.asList(root.listFiles());
+        List<File> newList = null;
+
 
         for (File file : files) {
             if (file.isDirectory()) {
-                listFiles(file.getAbsolutePath());
+                newList = listFiles(file.getAbsolutePath());
+
             }
             else if (file.isFile()){
                 returnRes.add(file);
+
+            }
+            if (newList != null) {
+                returnRes.addAll(newList);
             }
         }
 
@@ -119,33 +126,37 @@ public class JavaGrepImp implements JavaGrep {
         }
     }
 
-    @Override
-    public String getRootPath() {
-        return null;
-    }
-
-    @Override
-    public void setRootPath(String rootPath) {
-
+    public Logger getLogger() {
+        return logger;
     }
 
     @Override
     public String getRegex() {
-        return null;
+        return regex;
     }
 
     @Override
     public void setRegex(String regex) {
+        this.regex = regex;
+    }
 
+    @Override
+    public String getRootPath() {
+        return rootPath;
+    }
+
+    @Override
+    public void setRootPath(String rootPath) {
+        this.rootPath = rootPath;
     }
 
     @Override
     public String getOutFile() {
-        return null;
+        return outFile;
     }
 
     @Override
     public void setOutFile(String outFile) {
-
+        this.outFile = outFile;
     }
 }
