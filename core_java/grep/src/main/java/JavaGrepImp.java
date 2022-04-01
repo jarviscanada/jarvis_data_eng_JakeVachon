@@ -31,6 +31,7 @@ public class JavaGrepImp implements JavaGrep {
     javaGrepImp.setRootPath(args[1]);
     javaGrepImp.setOutFile(args[2]);
 
+    System.out.println(javaGrepImp.getRegex());
     try {
         javaGrepImp.process();
     }   catch (Exception ex) {
