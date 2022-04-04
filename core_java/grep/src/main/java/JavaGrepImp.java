@@ -19,6 +19,7 @@ public class JavaGrepImp implements JavaGrep {
     private String rootPath;
     private String outFile;
 
+
     public static void main(String[] args) {
         if (args.length != 3) {
             throw new IllegalArgumentException("USAGE: JavaGrep regex rootPath outFile");
@@ -83,6 +84,7 @@ public class JavaGrepImp implements JavaGrep {
     public List<String> readLines(File inputFile) throws FileNotFoundException {
         List<String> lines = new ArrayList<>();
         BufferedReader reader = null;
+
         try {
             reader = new BufferedReader(new FileReader(inputFile));
 
@@ -94,7 +96,7 @@ public class JavaGrepImp implements JavaGrep {
 
             reader.close();
         } catch (IOException e) {
-            e.printStackTrace();
+
         }
         return lines;
     }
