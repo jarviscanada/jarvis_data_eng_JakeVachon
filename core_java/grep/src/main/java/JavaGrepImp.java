@@ -81,7 +81,7 @@ public class JavaGrepImp implements JavaGrep {
     }
 
     @Override
-    public List<String> readLines(File inputFile) throws FileNotFoundException {
+    public List<String> readLines(File inputFile) throws IOException {
         List<String> lines = new ArrayList<>();
         BufferedReader reader = null;
 

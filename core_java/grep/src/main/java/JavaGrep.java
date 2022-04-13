@@ -13,7 +13,7 @@ public interface JavaGrep {
 
 
 
-    List<String> readLines(File inputFile) throws FileNotFoundException;
+    List<String> readLines(File inputFile) throws IOException;
 
 
 
