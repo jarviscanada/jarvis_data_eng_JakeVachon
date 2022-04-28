@@ -3,6 +3,11 @@
 ### 
 
 #Quick Start
+###Run the following to directly execute the program
+````
+mvn clean package
+java -jar ./target/grep-1.0-SNAPSHOT.jar <regex> <input file> <output file>
+````
 
 #Implementation
 ###Original
@@ -20,6 +25,9 @@ writeToFile(matchedLines)
 ##Performance issues
 ###This application may encounter memory related problems as the entire txt file and matched lines are stored in memory to be passed around. 
 ###The solution to this issue would to pass around streams, with streams no data would be stored in memory at any point resulting in a much less burdensome program. Though my 2nd implementation does make use of a stream it still inserts the stream information into a list before returning instead of directly returning the stream.
+
+##Test
+###This program was tested manually to ensure input files were found in any location, regex patterns were recognized and result printed to the designated output file. I placed the input file in various locations to confirm that it could be found anywhere with a recursive file search, as well as texting multiple regex patterns.
 
 #Deployment
 ###This project has been deployed using Github to allow user download, docker for container and PSQL initialization and Crontab to initiate data collection for host_usage
