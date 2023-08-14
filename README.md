@@ -27,7 +27,7 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_JakeVachon
 **Web Developer, National Bank of Canada (2022-present)**: Full-Stack developer in an Agile team working primarily with Java, Spring Boot, Python and SQL aswell as front-end programming with HTML/CSS and Javascript. 
 
 - Developed Spring Boot API using MVC architecture to interact with a MongoDB database through multiple endpoints to Get or Post information. Implemented custom exception handling and unit testing to ensure code quality.
-- Developed all Java and HTML/CSS/JS for the project *Bill 14* to bring NBC into compliance with new Quebec legal requirements. Wrote Java code to dynamically insert legal clauses into PDFs based on incoming requests and modified Docusign JSON to enable clickable hyperlinks directly through docusign.
+- Developed all Java and HTML/CSS/JS for the project *Bill 14* to bring NBC into compliance with new Quebec legal requirements. Wrote Java code to dynamically insert legal clauses into PDFs based on incoming requests, inserted legal clauses onto front front facing webpage and modified Docusign JSON to enable clickable hyperlinks directly through docusign.
 - Created Python Lambda to automatically generate Jira service request tickets through JIRA api. 
 
 **Software Developer, Jarvis (2022-present)**: Software Developer working with various languages and technologies such as Linux, SQL and Java.
