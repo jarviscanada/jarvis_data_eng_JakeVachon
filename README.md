@@ -1,6 +1,6 @@
 # Jacques Vachon . Jarvis Consulting
 
-I am a graduate of the Computer Programming diploma at Algonquin college. What excites me about the software industry is that I'm taking part in creating the invisible world that surrounds us all in our day to day lives, knowing I can create anything I can imagine with the right lines of code. I'm set on continuing to improve my abilities and knowledge on all things coding related and to become a top contributer in my team.
+I am a back-end developer with full-stack experience seeking challenging yet rewarding opportunities to grow my knowledge and abilities as a software developer. What excites me about software development are the endless opportunities to solve problems and the satisfaction that comes with solving them, I take great satisfaction in learning new things and am always looking to challenge myself. I'm set on continuing to improve my abilities and knowledge on all things coding related and to become a top contributor in my team.
 
 ## Skills
 
